@@ -1,0 +1,7 @@
+<%@ val resourceDomain: String%>
+<%@ val blogs: List[com.milo.server.beans.BlogProtos.Blog] %>
+<div id="index">
+  #for (blog <- blogs)
+    <% render("/soy/article_brief.ssp", Map("blog" -> blog)) %>
+  #end
+</div>

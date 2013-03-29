@@ -1,0 +1,18 @@
+package ProtoJs.Blog;
+option java_package = "com.milo.server.beans";
+//option java_outer_classname = "BlogProtos";
+
+enum BlogType {
+  Technic = 0;
+  Essay = 1;
+  Other = 2;
+}
+message Blog {
+  optional int64 id = 1;
+  optional string title = 2;
+  optional string brief = 3;
+  optional int64 timestamp = 4;
+  optional int32 review = 5;
+  optional string content = 6;
+  optional BlogType blogType = 7 [default = Technic];
+}

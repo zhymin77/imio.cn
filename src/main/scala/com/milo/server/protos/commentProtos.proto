@@ -1,0 +1,11 @@
+package ProtoJs.Comment;
+option java_package = "com.milo.server.beans";
+
+message Comment {
+  optional int64 id = 1;
+  optional int64 blogId = 2;
+  optional int64 userId = 3 [default = 0];
+  optional int64 timestamp = 4;
+  optional string content = 5;
+  optional int64 parentId = 6 [default = 0];
+}

@@ -1,0 +1,32 @@
+<%@ val resourceDomain: String%>
+<%@ val domain: String %>
+<%@ val username: String = "" %>
+<%@ val isLogin: Boolean = false %>
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="${domain}">iMilo小屋</a>
+      <div class="nav-collapse collapse">
+        <ul class="nav">
+          <li class="active"><a href="${domain}">Home</a></li>
+        #if (isLogin)
+          <li><a href="${domain}/blog/edit">Blog</a></li>
+        #end
+          <li><a href="${domain}/geolocation">Map</a></li>
+        </ul>
+      </div>
+      <ul class="nav pull-right">
+        <li><img src="${resourceDomain}/images/milo/carousel/0.jpg" id="head-user-img" class="img-rounded"/></li>
+        <li class="divider-vertical"></li>
+        #if (isLogin)
+        <li><a href="#">${username}</a></li>
+        <li><a href="${domain}/loginout">退出登录</a></li>
+        #else
+        <li><a href="${domain}/tologin">登录</a></li>
+        <li><a href="#">注册</a></li>
+        #end
+      </ul>
+    </div>
+  </div>
+</div>

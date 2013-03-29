@@ -1,0 +1,24 @@
+<%@ val blog: com.milo.server.beans.BlogProtos.Blog %>
+<%@ val domain: String %>
+<div class="article-brief">
+  <label class="well well-small brief-title"><a href="#">${blog.getTitle}</a></label>
+  <div class="article-brief-content">
+    <div class="acticle-brief-content-head">
+      <i class="icon-time"></i>
+      ${com.milo.server.utils.Timestamp.formatUnix(blog.getTimestamp, "yyyy年MM月dd日 HH:mm:ss")}
+      <i class="icon-user"></i>
+      <a href="#">milo</a>
+      <span>
+        <i class="icon-eye-open"></i>${blog.getReview}人阅读
+        <i class="icon-edit"></i><a href="#">评论</a>
+      </span>
+    </div>
+    <div class="acticle-brief-content-body">
+    &nbsp;&nbsp;${blog.getBrief}。。。。。
+    </div>
+    <div class="acticle-brief-content-foot">
+      <i class="icon-tag"></i><a href="#">${blog.getBlogType.toString}</a>
+      <span><a href="${domain}/findblog/${blog.getId}">全文阅读</a><i class="icon-share-alt"></i></span>
+    </div>
+  </div>
+</div>

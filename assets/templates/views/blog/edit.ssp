@@ -1,0 +1,16 @@
+<%@ val resourceDomain: String%>
+<%@ val domain: String %>
+<div id="edit-blog">
+  <div><label class="title">Blog 编辑</label></div>
+  <div class="title-line">
+    <label>标题</label><input type="text" id="blog-title">
+  </div>
+  <textarea id="CKEditor"></textarea>
+  <div class="submit">
+    <button id="blog-submit" onclick="" class="btn btn-success">保存</button>
+  </div>
+</div>
+<script type="text/javascript" src="${resourceDomain}/ckeditor/ckeditor.js"></script>
+<script type="text/javascript" src="${resourceDomain}/js/milo/blog.js"></script>
+<script type="text/javascript" src="${resourceDomain}/js/frameworks/protobuf.js"></script>
+<script type="text/javascript" src="${resourceDomain}/js/protos/blogProtos.proto.js"></script>

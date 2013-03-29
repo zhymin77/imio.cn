@@ -1,0 +1,21 @@
+#!/bin/bash
+
+Rtype=$1
+p=$PWD
+
+if [[ 'prod' = $Rtype ]]; then
+  echo 'Mode[prod]: skiped protoc step.'
+else
+  echo 'Mode[prod]: protoc starting...'
+  while [[ $p != '/' ]]; do
+    [ -r $p/src ] && break
+    p=$(dirname $p)
+  done
+  cd $p/src/main/scala/com/milo/server/protos 
+  for f in *.proto; do
+    # compile proto to java
+    $(protoc -I=. --java_out=$p/src/main/scala $f)
+    # compile proto to js
+    $p/shell/pbj $f $p/assets/js/protos/$f.js
+  done
+fi

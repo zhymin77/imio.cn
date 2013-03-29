@@ -1,0 +1,42 @@
+<%@ val resourceDomain: String%>
+<%@ val blog: com.milo.server.beans.BlogProtos.Blog %>
+<%@ val domain: String %>
+<div id="show-blog">
+  <div class="article-brief">
+    <label class="well well-small brief-title"
+      style="text-align:center;line-height:35px;font-size:25px;font-weight:bold;color:#048ACD;">${blog.getTitle}</label>
+    <div class="article-brief-content">
+      <div class="acticle-brief-content-head">
+        <i class="icon-time"></i>
+        ${com.milo.server.utils.Timestamp.formatUnix(blog.getTimestamp, "yyyy年MM月dd日 HH:mm:ss")}
+        <i class="icon-user"></i>
+        <a href="javascript:;">milo</a>
+        <span>
+          <i class="icon-eye-open"></i>${blog.getReview}人阅读
+          <i class="icon-edit"></i><a href="#">评论</a>
+        </span>
+      </div>
+      <div class="acticle-brief-content-body" style="margin: 0 10px 10px;">
+      &nbsp;&nbsp;${unescape(blog.getContent)}
+      </div>
+      <div class="acticle-brief-content-foot">
+        <i class="icon-tag"></i><a href="javascript:;">${blog.getBlogType.toString}</a>
+        <%--span><a href="${domain}/findblog/${blog.getId}">全文阅读</a><i class="icon-share-alt"></i></span--%>
+      </div>
+    </div>
+  </div>
+  <div class="comment-container">
+    <div class="commenteditor">
+      <textarea class="commentsay" blogId="${blog.getId}"></textarea>
+    </div>
+    <div class="comment-item">
+      <div class="comment-item-head">
+       <span class="username">～游客～<span>
+       <span class="time">2013-10-28 21:19</span>
+      </div>
+      <div class="comment-item-content">
+        写的傻傻的～～～～
+      </div>
+    </div>
+  </div>
+</div>

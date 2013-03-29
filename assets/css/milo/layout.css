@@ -1,0 +1,112 @@
+body {
+  padding-top: 41px;
+  background-image:url(../../images/milo/bg.jpg);
+}
+#body-wrap {
+  width: 960px;
+  margin: 0 auto;
+  zoom: 1;
+  background-color: #fff;
+}
+#content {
+  width: 940px;
+  padding: 0 10px 50px 10px;
+  margin: auto;
+}
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  padding: 30px 0 20px 0;
+}
+#footer {
+  border-top: 1px solid #DDE8E9;
+  font-family: Arial, Simsum, sans-serif;
+  font-size: 13px;
+  text-align: center;
+  line-height: 30px;
+}
+.index-carousel-img {
+  width: 100%;
+  height: 100%;
+  margin-top: 5px;
+}
+#index-carousel {
+  width: 800px;
+  height: 200px;
+  margin: 0 0 10px 65px;
+}
+#head-user-img {
+  width: 30px;
+  height: 30px;
+  margin-top: 5px;
+}
+#inputUsername, #inputPassword {
+  height: 30px;
+}
+#login {
+  padding-top: 30px;
+}
+.hero-unit {
+  padding: 30px;
+  width: 200px;
+  height: 100px;
+  margin-left: 120px;
+}
+.acticle-brief-content-head {
+  padding: 0 10px 0 10px;
+  min-height: 20px;
+  background-color: #FFE;
+}
+.acticle-brief-content-head i {
+  margin: 0 3px 0 10px;
+}
+.acticle-brief-content-head span {
+  float: right;
+  padding-right: 10px;
+}
+.acticle-brief-content-body {
+  padding: 5px 0 5px 0;
+  line-height: 22px;
+}
+.acticle-brief-content-foot {
+  line-height: 25px;
+  min-height: 25px;
+  background-color: #EEE;
+}
+.acticle-brief-content-foot i {
+  margin: 0 3px 0 10px;
+}
+.acticle-brief-content-foot span {
+  float: right;
+  padding-right: 10px;
+}
+.brief-title {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 20px;
+  background-color: #DDD;
+  margin-bottom: 0;
+}
+.article-brief {
+  box-shadow: 0 0 5px 2px #ccc;
+  -moz-box-shadow: 0 0 5px 2px #ccc;
+  -webkit-box-shadow: 0 0 5px 2px #ccc;
+}
+.submit {
+  text-align: center;
+  margin: 10px 0 10px 0;
+}
+.submit button {
+  width: 300px;  
+  height: 40px;
+}
+#edit-blog .title-line {
+  margin: 10px 0 10px 0;
+}
+#edit-blog .title-line label {
+  display: inline;
+}
+#edit-blog .title-line input {
+  margin: 0 0 0 10px;
+  height: 25px;
+}

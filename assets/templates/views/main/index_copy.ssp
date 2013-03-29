@@ -1,0 +1,32 @@
+<%@ val resourceDomain: String%>
+<div id="index">
+  <div id="index-carousel" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="${resourceDomain}/images/milo/carousel/0.jpg" class="index-carousel-img img-rounded"/>
+        <div class="carousel-caption">
+          <h4>Imilo 1</h4>
+          <p>无敌imilo.</p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="${resourceDomain}/images/milo/carousel/1.jpg" class="index-carousel-img img-rounded"/>
+        <div class="carousel-caption">
+          <h4>Second Thumbnail label</h4>
+          <p>看milo.</p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="${resourceDomain}/images/milo/carousel/3.jpg" class="index-carousel-img img-rounded"/>
+        <div class="carousel-caption">
+          <h4>Third Thumbnail label</h4>
+          <p>第三章.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Carousel nav -->
+    <a class="carousel-control left" href="#index-carousel" data-slide="prev">&lsaquo;</a>
+    <a class="carousel-control right" href="#index-carousel" data-slide="next">&rsaquo;</a>
+  </div>
+  <% render("/soy/article_brief.ssp") %>
+</div>
