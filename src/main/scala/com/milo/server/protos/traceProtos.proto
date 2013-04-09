@@ -1,0 +1,9 @@
+package ProtoJs.Trace;
+option java_package = "com.milo.server.beans";
+
+message Trace {
+  optional int64 id = 1;
+  optional int64 blogId = 2;
+  optional int64 timestamp = 3;
+  optional string ip = 4;
+}

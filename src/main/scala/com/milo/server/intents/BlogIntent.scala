@@ -19,8 +19,8 @@ object BlogIntent extends BaseIntent {
       req.respond(ResponseString("ok"))
   }
   val info = unfiltered.netty.async.Intent {
-    case req@GET(Path(Seg("findblog" :: blogId :: Nil))) & WithS(s) =>
-      val blog = BlogService.findFullById(blogId)
+    case req@GET(Path(Seg("findblog" :: blogId :: Nil))) & Params(p) & WithS(s) =>
+      val blog = BlogService.findFullById(blogId, req.remoteAddr)
       val map = Map("blog" -> blog, "blogId" -> blogId)
       req.respond(HtmlContent ~> render("blog/show.ssp", map, s))
   }

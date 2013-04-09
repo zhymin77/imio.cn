@@ -33,7 +33,7 @@ ProtoJs.Blog.Blog = PROTO.Message("ProtoJs.Blog.Blog",{
 		id: 4
 	},
 	review: {
-		options: {},
+		options: {default_value:0},
 		multiplicity: PROTO.optional,
 		type: function(){return PROTO.int32;},
 		id: 5

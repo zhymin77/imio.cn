@@ -12,7 +12,7 @@ message Blog {
   optional string title = 2;
   optional string brief = 3;
   optional int64 timestamp = 4;
-  optional int32 review = 5;
+  optional int32 review = 5 [default = 0];
   optional string content = 6;
   optional BlogType blogType = 7 [default = Technic];
 }

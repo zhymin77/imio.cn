@@ -88,6 +88,7 @@ body {
   margin-bottom: 0;
 }
 .article-brief {
+  margin-bottom: 20px;
   box-shadow: 0 0 5px 2px #ccc;
   -moz-box-shadow: 0 0 5px 2px #ccc;
   -webkit-box-shadow: 0 0 5px 2px #ccc;

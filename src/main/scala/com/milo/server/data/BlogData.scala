@@ -9,6 +9,23 @@ import scala.collection.mutable.ListBuffer
 
 object BlogData extends BaseData {
 
+  def review(blogId: String) = executeUpdate(SQL.Review(blogId))
+  
+  private def executeUpdate(sql: String) = {
+    var conn: Connection = null
+    var stmt: Statement = null
+    try {
+      conn = getConnection
+      stmt = conn.createStatement
+      stmt.executeUpdate(sql)
+    } catch {
+      case e: Exception => e.printStackTrace
+    } finally {
+      close(null, stmt, conn)
+    }
+  
+  }
+
   def save(blog: Blog) = {
     var conn: Connection = null
     var ppmt: PreparedStatement = null
@@ -41,7 +58,9 @@ object BlogData extends BaseData {
       stmt = conn.createStatement
       rs = stmt.executeQuery(SQL.QueryFullById(id))
       if (rs.next) {
-        Blog.parseFrom(rs.getBinaryStream("data"))
+        val blog = Blog.newBuilder.mergeFrom(Blog.parseFrom(rs.getBinaryStream("data")))
+        blog.setReview(rs.getInt("review"))
+        blog.build
       } else {
         null
       }
@@ -85,8 +104,11 @@ object BlogData extends BaseData {
   object SQL {
     val table = "tb_blog"
     val Insert = "insert into " + table + " (type, title, brief, timestamp, data) values(?, ?, ?, ?, ?)"
-    val QueryAll = "select id, timestamp, type, title, brief, review from " + table + " order by timestamp ASC"
+    //val QueryAll = "select id, timestamp, type, title, brief, review from " + table + " order by timestamp ASC"
+    val QueryAll = "select id, timestamp, type, title, brief, review from " + table + " order by timestamp DESC"
 
-    def QueryFullById(id: String) = "select data from " + table + " where id='%s'".format(id)
+    def QueryFullById(id: String) = "select data, review from " + table + " where id='%s'".format(id)
+
+    def Review(id: String) = "update " + table + " set review=review+1 where id='%s'".format(id)
   }
 }

@@ -15,5 +15,9 @@ object BlogService extends BaseService {
 
   def findAll = BlogData.findAll
 
-  def findFullById(id: String) = BlogData.findFullById(id)
+  def findFullById(id: String, ip: String) = {
+    TraceService.insert(id, ip)
+    BlogData.review(id)
+    BlogData.findFullById(id)
+  }
 }

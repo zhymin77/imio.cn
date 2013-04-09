@@ -99,7 +99,7 @@ public final class BlogProtos {
     boolean hasTimestamp();
     long getTimestamp();
     
-    // optional int32 review = 5;
+    // optional int32 review = 5 [default = 0];
     boolean hasReview();
     int getReview();
     
@@ -224,7 +224,7 @@ public final class BlogProtos {
       return timestamp_;
     }
     
-    // optional int32 review = 5;
+    // optional int32 review = 5 [default = 0];
     public static final int REVIEW_FIELD_NUMBER = 5;
     private int review_;
     public boolean hasReview() {
@@ -786,7 +786,7 @@ public final class BlogProtos {
         return this;
       }
       
-      // optional int32 review = 5;
+      // optional int32 review = 5 [default = 0];
       private int review_ ;
       public boolean hasReview() {
         return ((bitField0_ & 0x00000010) == 0x00000010);
@@ -892,13 +892,13 @@ public final class BlogProtos {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\020blogProtos.proto\022\014ProtoJs.Blog\"\227\001\n\004Blo" +
+      "\n\020blogProtos.proto\022\014ProtoJs.Blog\"\232\001\n\004Blo" +
       "g\022\n\n\002id\030\001 \001(\003\022\r\n\005title\030\002 \001(\t\022\r\n\005brief\030\003 " +
-      "\001(\t\022\021\n\ttimestamp\030\004 \001(\003\022\016\n\006review\030\005 \001(\005\022\017" +
-      "\n\007content\030\006 \001(\t\0221\n\010blogType\030\007 \001(\0162\026.Prot" +
-      "oJs.Blog.BlogType:\007Technic*-\n\010BlogType\022\013" +
-      "\n\007Technic\020\000\022\t\n\005Essay\020\001\022\t\n\005Other\020\002B\027\n\025com" +
-      ".milo.server.beans"
+      "\001(\t\022\021\n\ttimestamp\030\004 \001(\003\022\021\n\006review\030\005 \001(\005:\001" +
+      "0\022\017\n\007content\030\006 \001(\t\0221\n\010blogType\030\007 \001(\0162\026.P" +
+      "rotoJs.Blog.BlogType:\007Technic*-\n\010BlogTyp" +
+      "e\022\013\n\007Technic\020\000\022\t\n\005Essay\020\001\022\t\n\005Other\020\002B\027\n\025" +
+      "com.milo.server.beans"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {

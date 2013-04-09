@@ -20,4 +20,13 @@ CREATE TABLE IF NOT EXISTS tb_comment(
   timestamp int(11),
   content char(50) NOT NULL DEFAULT '',
   parentId int(11)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/**
+ * create for trace.
+ */
+CREATE TABLE IF NOT EXISTS tb_trace(
+  id int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  blogId int(11),
+  timestamp int(11),
+  ip char(20)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
