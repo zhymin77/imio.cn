@@ -8,27 +8,12 @@ import scala.collection.mutable.ListBuffer
 
 object CommentData extends BaseData {
 
-  def insert(comment: Comment) = {
-    var conn: Connection = null
-    var ppmt: PreparedStatement = null
-    try {
-      conn = getConnection
-      conn.setAutoCommit(false)
-      ppmt = conn.prepareStatement(SQL.Insert)
-      ppmt.setLong(1, comment.getBlogId)
-      ppmt.setLong(2, comment.getUserId)
-      ppmt.setLong(3, comment.getTimestamp)
-      ppmt.setString(4, comment.getContent)
-      ppmt.setLong(5, comment.getParentId)
-      ppmt.execute
-      conn.commit
-    } catch {
-      case e: Exception =>
-        if (conn != null) conn.rollback
-        e.printStackTrace
-    } finally {
-      close(null, ppmt, conn)
-    }
+  def insert(comment: Comment) = withCColl(SQL.Insert) { ppmt =>
+    ppmt.setLong(1, comment.getBlogId)
+    ppmt.setLong(2, comment.getUserId)
+    ppmt.setLong(3, comment.getTimestamp)
+    ppmt.setString(4, comment.getContent)
+    ppmt.setLong(5, comment.getParentId)
   }
 
   object SQL {

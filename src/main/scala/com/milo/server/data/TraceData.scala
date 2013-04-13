@@ -8,25 +8,10 @@ import scala.collection.mutable.ListBuffer
 
 object TraceData extends BaseData {
 
-  def insert(blogId: Long, timestamp: Long, ip: String) = {
-    var conn: Connection = null
-    var ppmt: PreparedStatement = null
-    try {
-      conn = getConnection
-      conn.setAutoCommit(false)
-      ppmt = conn.prepareStatement(SQL.Insert)
-      ppmt.setLong(1, blogId)
-      ppmt.setLong(2, timestamp)
-      ppmt.setString(3, ip)
-      ppmt.execute
-      conn.commit
-    } catch {
-      case e: Exception =>
-        if (conn != null) conn.rollback
-        throw e
-    } finally {
-      close(null, ppmt, conn)
-    }
+  def insert(blogId: Long, timestamp: Long, ip: String) = withCColl(SQL.Insert) { ppmt =>
+    ppmt.setLong(1, blogId)
+    ppmt.setLong(2, timestamp)
+    ppmt.setString(3, ip)
   }
 
   object SQL {
