@@ -3,7 +3,7 @@
 <%@ val body: String %>
 <%@ val metaContent: String = "milo个人主页，以后会开放给吊丝们，当前自己先玩玩" %>
 <%@ val metaKeyWords: String = "milo,博客,blog,笔记,图片,搜索引擎,个人主页,软件开发" %>
-
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -12,10 +12,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="${unescape(metaContent)}">
     <meta name="keywords" content="${unescape(metaKeyWords)}">
-    <link href="${resourceDomain}/css/frameworks/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="${resourceDomain}/css/frameworks/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
-    <link href="${resourceDomain}/css/milo/layout.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="${resourceDomain}/js/frameworks/jquery-1.9.1.min.js"></script>
     <script type="text/javascript">
       domain = '${domain}';
       resourceDomain = '${resourceDomain}';
@@ -30,4 +26,14 @@
     <% render("/float/cloud.ssp", Map("resourceDomain" -> resourceDomain)) %>
   </body>
 </html>
+<!--[if IE]>
+<script src="${resourceDomain}/js/frameworks/html5.js"></script>
+<![endif]-->
+<link href="${resourceDomain}/css/milo/layout.css" rel="stylesheet" type="text/css">
+<link href="${resourceDomain}/css/frameworks/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="${resourceDomain}/css/frameworks/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="${resourceDomain}/js/frameworks/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="${resourceDomain}/js/frameworks/bootstrap.min.js"></script>
+<script type="text/javascript" src="${resourceDomain}/ckeditor/ckeditor.js"></script>
+<script type="text/javascript" src="${resourceDomain}/js/frameworks/protobuf.js"></script>
+<script type="text/javascript" src="${resourceDomain}/js/protos/blogProtos.proto.js"></script>
