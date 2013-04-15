@@ -57,7 +57,6 @@ protected[data] abstract class BaseData {
       close(null, ppmt, conn)
     }
   }
-
   def withRColl[T](sql: String)(op: ResultSet => T): T = {
     var conn: Connection = null
     var stmt: Statement  = null
@@ -73,7 +72,6 @@ protected[data] abstract class BaseData {
       close(rs, stmt, conn)
     }
   }
-
   def withUColl[T](sql: String) = {
     var conn: Connection = null
     var stmt: Statement = null
@@ -86,6 +84,5 @@ protected[data] abstract class BaseData {
     } finally {
       close(null, stmt, conn)
     }
-  
   }
 }

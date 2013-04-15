@@ -1,0 +1,5 @@
+<%@ val resourceDomain: String%>
+
+<div id="f-c">
+  <img src="${resourceDomain}/images/milo/cloud.png"/>
+</div>

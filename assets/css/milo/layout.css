@@ -10,7 +10,7 @@ body {
 }
 #content {
   width: 940px;
-  padding: 0 10px 50px 10px;
+  padding: 0 10px 0 10px;
   margin: auto;
 }
 .title {
@@ -25,6 +25,7 @@ body {
   font-size: 13px;
   text-align: center;
   line-height: 30px;
+  padding-bottom: 20px;
 }
 .index-carousel-img {
   width: 100%;
@@ -40,6 +41,40 @@ body {
   width: 30px;
   height: 30px;
   margin-top: 5px;
+  animation: rotate 2s infinite alternate;
+  -webkit-animation: rotate 2s infinite alternate;
+  -moz-animation: rotate 2s infinite alternate;
+  -ms-animation: rotate 2s infinite alternate;
+  -o-animation: rotate 2s infinite alternate;
+}
+#head-user-img:hover {
+  width: 60px;
+  height: 60px;
+}
+@keyframes rotate
+{
+  from { transform: rotate(20); }
+  to { transform: rotate(-20); }
+}
+@-webkit-keyframes rotate
+{
+  from { -webkit-transform: rotate(20deg); }
+  to { -webkit-transform: rotate(-20deg); }
+}
+@-moz-keyframes rotate
+{
+  from { -moz-transform: rotate(20deg); }
+  to { -moz-transform: rotate(-20deg); }
+}
+@-ms-keyframes rotate
+{
+  from { -ms-transform: rotate(20deg); }
+  to { -ms-transform: rotate(-20deg); }
+}
+@-o-keyframes rotate
+{
+  from { -o-transform: rotate(20deg); }
+  to { -o-transform: rotate(-20deg); }
 }
 #inputUsername, #inputPassword {
   height: 30px;
@@ -73,6 +108,11 @@ body {
   line-height: 25px;
   min-height: 25px;
   background-color: #EEE;
+  border-radius: 0 0 5px 5px;
+  -webkit-border-radius: 0 0 5px 5px;
+  -moz-border-radius: 0 0 5px 5px;
+  -ms-border-radius: 0 0 5px 5px;
+  -o-border-radius: 0 0 5px 5px;
 }
 .acticle-brief-content-foot i {
   margin: 0 3px 0 10px;
@@ -86,12 +126,24 @@ body {
   font-size: 20px;
   background-color: #DDD;
   margin-bottom: 0;
+  border-radius: 10px 10px 0 0 ;
+  -webkit-border-radius: 10px 10px 0 0;
+  -moz-border-radius: 10px 10px 0 0;
+  -ms-border-radius: 10px 10px 0 0;
+  -o-border-radius: 10px 10px 0 0;
 }
 .article-brief {
   margin-bottom: 20px;
   box-shadow: 0 0 5px 2px #ccc;
-  -moz-box-shadow: 0 0 5px 2px #ccc;
   -webkit-box-shadow: 0 0 5px 2px #ccc;
+  -moz-box-shadow: 0 0 5px 2px #ccc;
+  -ms-box-shadow: 0 0 5px 2px #ccc;
+  -o-box-shadow: 0 0 5px 2px #ccc;
+  border-radius: 10px 10px 5px 5px;
+  -webkit-border-radius: 10px 10px 5px 5px;
+  -moz-border-radius: 10px 10px 5px 5px;
+  -ms-border-radius: 10px 10px 5px 5px;
+  -o-border-radius: 10px 10px 5px 5px;
 }
 .submit {
   text-align: center;
@@ -110,4 +162,53 @@ body {
 #edit-blog .title-line input {
   margin: 0 0 0 10px;
   height: 25px;
+}
+#f-c{
+  position: absolute;
+  width: auto;
+  height: auto;
+  animation: cloud 20s linear infinite;
+  -webkit-animation: cloud 20s linear infinite;
+  -moz-animation: cloud 20s linear infinite;
+  -ms-animation: cloud 20s linear infinite;
+  -o-animation: cloud 20s linear infinite;
+}
+#f-c:hover{
+  display: none;
+}
+#f-c:over{ display: block; }
+@keyframes cloud
+{
+0%  {left: 0; top: 20px; width: 0;}
+10%  {left: 0%; top: 40px; width: 350px;}
+90%  {left: 74%; top: 40px; width: 350px;}
+100%  {left: 100%; top: 20px; width: 0}
+}
+@-webkit-keyframes cloud
+{
+0%  {left: 0; top: 20px; width: 0;}
+10%  {left: 0%; top: 40px; width: 350px;}
+90%  {left: 74%; top: 40px; width: 350px;}
+100%  {left: 100%; top: 20px; width: 0}
+}
+@-moz-keyframes cloud
+{
+0%  {left: 0; top: 20px; width: 0;}
+10%  {left: 0%; top: 40px; width: 350px;}
+90%  {left: 74%; top: 40px; width: 350px;}
+100%  {left: 100%; top: 20px; width: 0}
+}
+@-ms-keyframes cloud
+{
+0%  {left: 0; top: 20px; width: 0;}
+10%  {left: 0%; top: 40px; width: 350px;}
+90%  {left: 74%; top: 40px; width: 350px;}
+100%  {left: 100%; top: 20px; width: 0}
+}
+@-o-keyframes cloud
+{
+0%  {left: 0; top: 20px; width: 0;}
+10%  {left: 0%; top: 40px; width: 350px;}
+90%  {left: 74%; top: 40px; width: 350px;}
+100%  {left: 100%; top: 20px; width: 0}
 }

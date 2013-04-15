@@ -24,9 +24,10 @@
   <body>
     <div id="body-wrap">
       <% render("/layout/head.ssp", Map("resourceDomain" -> resourceDomain, "domain" -> domain)) %>
-      <div id="content"> ${unescape(body)} <div>
+      <div id="content"> ${unescape(body)} </div>
       <% render("/layout/foot.ssp") %>
     </div>
+    <% render("/float/cloud.ssp", Map("resourceDomain" -> resourceDomain)) %>
   </body>
 </html>
 <script type="text/javascript" src="${resourceDomain}/js/frameworks/bootstrap.min.js"></script>
