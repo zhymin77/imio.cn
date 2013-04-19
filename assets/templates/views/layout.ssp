@@ -24,6 +24,9 @@
       <% render("/layout/foot.ssp") %>
     </div>
     <% render("/float/cloud.ssp", Map("resourceDomain" -> resourceDomain)) %>
+    <% render("/float/fish.ssp", Map("resourceDomain" -> resourceDomain)) %>
+    <% render("/float/seahorse.ssp", Map("resourceDomain" -> resourceDomain)) %>
+    <% render("/float/feng.ssp", Map("resourceDomain" -> resourceDomain)) %>
   </body>
 </html>
 <!--[if IE]>

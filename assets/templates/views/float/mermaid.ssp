@@ -1,0 +1,5 @@
+<%@ val resourceDomain: String%>
+
+<div id="f-m" onmousedown="return false;">
+  <img src="${resourceDomain}/images/milo/mermaid.png"/>
+</div>
