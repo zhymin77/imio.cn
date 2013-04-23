@@ -39,4 +39,5 @@
       </div>
     </div>
   </div>
+  <% render("/float/share.ssp", Map("bshareText" -> ("文章：《" + blog.getTitle + "》"))) %>
 </div>

@@ -1,0 +1,9 @@
+<%@ val bshareText: String = "milo技术博客网站，无私分享开发经验及网站源码，欢迎围观啦～    " %>
+<%@ val openSrc: String = "Website sharing Github：https://github.com/zhymin77/imio.cn" %>
+<div id="f-share">
+<a class="bshareDiv" href="http://www.bshare.cn/share">分享按钮</a>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&amp;style=3&amp;fs=4&amp;textcolor=#fff&amp;bgcolor=#19D&amp;text=分享到"></script>
+<p class="BSHARE_TEXT" hidden>
+  ${bshareText}${openSrc}
+</p>
+</div>

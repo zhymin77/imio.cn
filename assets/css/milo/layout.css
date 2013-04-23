@@ -410,3 +410,14 @@ body {
   from { -o-transform: rotate(20deg); }
   to { -o-transform: rotate(-20deg); }
 }
+#show-blog .commenteditor{
+  text-align: center;
+}
+#show-blog textarea{
+  width: 624px;
+}
+#f-weather{
+  position: fixed;
+  top: 40px;
+  overflow: hidden;
+}

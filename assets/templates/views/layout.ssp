@@ -1,4 +1,5 @@
 <%@ val resourceDomain: String %>
+<%@ val blogs: List[com.milo.server.beans.BlogProtos.Blog] = Nil %>
 <%@ val domain: String %>
 <%@ val body: String %>
 <%@ val metaContent: String = "milo个人主页，以后会开放给吊丝们，当前自己先玩玩" %>
@@ -27,6 +28,10 @@
     <% render("/float/fish.ssp", Map("resourceDomain" -> resourceDomain)) %>
     <% render("/float/seahorse.ssp", Map("resourceDomain" -> resourceDomain)) %>
     <% render("/float/feng.ssp", Map("resourceDomain" -> resourceDomain)) %>
+    <% render("/float/weather.ssp") %>
+    #if (blogs.size != Nil)
+      <% render("/float/share.ssp") %>
+    #end
   </body>
 </html>
 <!--[if IE]>
