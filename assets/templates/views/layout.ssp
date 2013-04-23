@@ -1,5 +1,6 @@
 <%@ val resourceDomain: String %>
 <%@ val blogs: List[com.milo.server.beans.BlogProtos.Blog] = Nil %>
+<%@ val blog: com.milo.server.beans.BlogProtos.Blog = null %>
 <%@ val domain: String %>
 <%@ val body: String %>
 <%@ val metaContent: String = "milo个人主页，以后会开放给吊丝们，当前自己先玩玩" %>
@@ -8,7 +9,13 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>iMilo</title>
+    <title>
+    #if (blog == null)
+    iMilo 主页
+    #else
+      iMilo ${blog.getTitle}
+    #end
+    </title>
     <meta name="baidu-site-verification" content="ZXKVqpDhMWahGB40" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="${unescape(metaContent)}">
