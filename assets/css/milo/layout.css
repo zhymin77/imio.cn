@@ -80,6 +80,7 @@ body {
   padding-right: 10px;
 }
 .acticle-brief-content-body {
+  word-wrap: break-word;
   padding: 5px 0 5px 0;
   line-height: 22px;
 }

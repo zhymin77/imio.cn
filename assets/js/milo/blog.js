@@ -12,18 +12,9 @@ $('#blog-submit').click(function() {
   blog.content = editor.getData();
   blog.blogType = ProtoJs.Blog.BlogType.Technic;
   blog.SerializeToStream(stream);
-  postJson(domain + '/blog/save', stream.getString());
+  mUtil.postJson(domain + '/blog/save', stream.getString(),
+    function(msg) { alert('保存成功: ' + msg); },
+    function(msg) { alert('保存失败：' + msg); }
+  );
 });
-function postJson(url, data) {
-  $.ajax({
-    type: 'POST',
-    url: url,
-    data: data,
-    success: function(msg) {
-      console.log('success....');
-    },
-    error: function(msg) {
-      console.log('error....');
-    }
-  });
-};
+

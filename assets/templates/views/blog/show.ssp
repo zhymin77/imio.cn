@@ -28,6 +28,7 @@
   <div class="comment-container">
     <div class="commenteditor">
       <textarea class="commentsay" blogId="${blog.getId}"></textarea>
+      <button onclick="submitComment(this);">递交</button>
     </div>
     <div class="comment-item">
       <div class="comment-item-head">
