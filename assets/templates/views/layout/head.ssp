@@ -13,6 +13,7 @@
         #if (isLogin)
           <li><a href="${domain}/blog/edit">Blog</a></li>
         #end
+          <li><a href="${resourceDomain}/lottery/lottery.html">lottery</a></li>
           <li><a href="${domain}/geolocation">Map</a></li>
         </ul>
       </div>
