@@ -20,6 +20,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="${unescape(metaContent)}">
     <meta name="keywords" content="${unescape(metaKeyWords)}">
+    <!--[if IE]>
+    <script src="${resourceDomain}/js/frameworks/html5.js"></script>
+    <![endif]-->
+    <link href="${resourceDomain}/css/milo/layout.css" rel="stylesheet" type="text/css">
+    <link href="${resourceDomain}/css/frameworks/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="${resourceDomain}/css/frameworks/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
     <script type="text/javascript">
       domain = '${domain}';
       resourceDomain = '${resourceDomain}';
@@ -41,12 +47,6 @@
     #end
   </body>
 </html>
-<!--[if IE]>
-<script src="${resourceDomain}/js/frameworks/html5.js"></script>
-<![endif]-->
-<link href="${resourceDomain}/css/milo/layout.css" rel="stylesheet" type="text/css">
-<link href="${resourceDomain}/css/frameworks/bootstrap.min.css" rel="stylesheet" type="text/css">
-<link href="${resourceDomain}/css/frameworks/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="${resourceDomain}/js/frameworks/jquery-1.9.1.min.js"></script>
 <script type='text/javascript' charset="utf-8" src='http://js.touclick.com/js.touclick?b=959dff8e-827f-4a44-b204-7f42d41d0cc9&pf=api&v=v2-2'></script>
 <script type="text/javascript" src="${resourceDomain}/js/milo/util.js"></script>
@@ -55,3 +55,5 @@
 <script type="text/javascript" src="${resourceDomain}/ckeditor/ckeditor.js"></script>
 <script type="text/javascript" src="${resourceDomain}/js/frameworks/protobuf.js"></script>
 <script type="text/javascript" src="${resourceDomain}/js/protos/blogProtos.proto.js"></script>
+<script type="text/javascript" src="${resourceDomain}/js/protos/commentProtos.proto.js"></script>
+<script type="text/javascript" src="${resourceDomain}/js/milo/showblog.js"></script>

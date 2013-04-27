@@ -6,6 +6,8 @@ import unfiltered.request._
 import unfiltered.response._
 
 abstract class BaseIntent extends ScalateSupport {
+  protected val SUCCESS = "success"
+  protected val FAILED = "failed"
 
   object Decode {
     def unapply(s: String): Option[String] = Some(decode(s))

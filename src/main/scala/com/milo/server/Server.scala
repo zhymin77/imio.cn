@@ -10,6 +10,7 @@ object Server {
     println("start listening on port: " + ServerSetting.port)
     unfiltered.netty.Http(ServerSetting.port)
       .plan(asyncPlanify(
+      CommentIntent.save,
       LoginIntent.auth,
       BlogIntent.edit,
       BlogIntent.info,

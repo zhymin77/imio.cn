@@ -12,5 +12,6 @@ object CommentIntent extends BaseIntent {
   val save = unfiltered.netty.async.Intent {
     case req@POST(Path("/savecomment")) & WithS(s) =>
     CommentService.save(Body.stream(req), s.userId)
+    req.respond(ResponseString(SUCCESS))
   }
 }

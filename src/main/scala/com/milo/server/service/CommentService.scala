@@ -13,4 +13,6 @@ object CommentService extends BaseService {
     comment.setUserId(userId)
     CommentData.insert(comment.build)
   }
+
+  def findByBlogId(blogId: String) = CommentData.findByBlogId(blogId)
 }

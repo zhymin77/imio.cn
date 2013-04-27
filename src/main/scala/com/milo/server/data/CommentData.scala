@@ -16,9 +16,26 @@ object CommentData extends BaseData {
     ppmt.setLong(5, comment.getParentId)
   }
 
+  def findByBlogId(bid: String) = withRColl(SQL.QueryByBlodId(bid)) { rs =>
+    val listBuffer = ListBuffer[Comment]()
+    while (rs.next) {
+      val builder = Comment.newBuilder
+      builder.setId(rs.getLong(1))
+      builder.setBlogId(rs.getLong(2))
+      builder.setUserId(rs.getLong(3))
+      builder.setTimestamp(rs.getLong(4))
+      builder.setContent(rs.getString(5))
+      builder.setParentId(rs.getLong(6))
+      listBuffer += builder.build
+    }
+    listBuffer.toList
+  }
+
   object SQL {
     val table = "tb_comment"
     val Insert = "insert into " + table +
       " (blogId, userId, timestamp, content, parentId) values(?, ?, ?, ?, ?)"
+    def QueryByBlodId(bid: String) = ("select id, blogId, userId, timestamp, content, parentId from "
+      + table + " where blogId='%s' order by timestamp DESC").format(bid)
   }
 }
