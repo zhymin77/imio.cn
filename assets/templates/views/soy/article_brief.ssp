@@ -1,7 +1,7 @@
 <%@ val blog: com.milo.server.beans.BlogProtos.Blog %>
 <%@ val domain: String %>
 <div class="article-brief">
-  <label class="well well-small brief-title">
+  <label class="brief-title well-small">
     <a href="${domain}/findblog/${blog.getId}">${blog.getTitle}</a>
   </label>
   <div class="article-brief-content">

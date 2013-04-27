@@ -5,7 +5,7 @@
 <%@ val blogId: String %>
 <div id="show-blog">
   <div class="article-brief">
-    <label class="well well-small brief-title"
+    <label class="well-small brief-title"
       style="text-align:center;line-height:35px;font-size:25px;font-weight:bold;color:#048ACD;">${blog.getTitle}</label>
     <div class="article-brief-content">
       <div class="acticle-brief-content-head">
@@ -33,15 +33,21 @@
       <button onclick="submitComment();">递交</button>
     </div>
     <div id="comments">
+    #for (c <- comments)
       <div class="comment-item">
         <div class="comment-item-head">
-         <span class="username">～游客～<span>
-         <span class="time">2013-10-28 21:19</span>
+        #if (c.getUserId == 0)
+         <span class="username">～游客～</span>
+        #else
+         <span class="username">imilo.cn</span>
+        #end
+         <span class="time">${com.milo.server.utils.Timestamp.formatUnix(c.getTimestamp, "yyyy年MM月dd日 HH:mm:ss")}</span>
         </div>
         <div class="comment-item-content">
-          写的傻傻的～～～～
+          ${c.getContent}
         </div>
       </div>
+    #end
     </div>
   </div>
   <% render("/float/share.ssp", Map("bshareText" -> ("文章：《" + blog.getTitle + "》"))) %>

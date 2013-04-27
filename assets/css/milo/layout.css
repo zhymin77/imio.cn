@@ -422,3 +422,32 @@ body {
   top: 40px;
   overflow: hidden;
 }
+.comment-container {
+  width: 700px;
+  margin: 0 auto;
+}
+.comment-item {
+  margin-bottom: 10px;
+  background-color: #36162c;
+  color: white;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.comment-item {
+  padding: 10px;
+}
+.comment-item .time {
+  float: right;
+}
+.comment-item-head {
+  border-bottom: solid 1px;
+  padding-bottom: 3px;
+}
+.comment-item-content {
+  margin: 10px 20px 0 20px;
+  font-size: 16px;
+  line-height: 21px;
+}
