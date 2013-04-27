@@ -29,6 +29,7 @@
   </div>
   <div class="comment-container">
     <div class="commenteditor">
+      <a hidden name="herecomment"></a>
       <textarea id ="commentsay" class="commentsay" blogId="${blogId}"></textarea>
       <button onclick="submitComment();">递交</button>
     </div>

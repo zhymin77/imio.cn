@@ -12,7 +12,7 @@
       <a href="#">milo</a>
       <span>
         <i class="icon-eye-open"></i>${blog.getReview}人阅读
-        <i class="icon-edit"></i><a href="#">评论</a>
+        <i class="icon-edit"></i><a href="${domain}/findblog/${blog.getId}#herecomment">评论</a>
       </span>
     </div>
     <div class="acticle-brief-content-body">
