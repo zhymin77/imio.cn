@@ -2,7 +2,7 @@
 <%@ val domain: String %>
 <div class="article-brief">
   <label class="brief-title well-small">
-    <a href="${domain}/findblog/${blog.getId}">${blog.getTitle}</a>
+    <a href="${domain}/findblog/${blog.getId}" target="_blank">${blog.getTitle}</a>
   </label>
   <div class="article-brief-content">
     <div class="acticle-brief-content-head">
@@ -12,15 +12,26 @@
       <a href="#">milo</a>
       <span>
         <i class="icon-eye-open"></i>${blog.getReview}人阅读
-        <i class="icon-edit"></i><a href="${domain}/findblog/${blog.getId}#herecomment">评论</a>
+        <i class="icon-edit"></i><a target="_blank" href="${domain}/findblog/${blog.getId}#herecomment">评论</a>
       </span>
     </div>
     <div class="acticle-brief-content-body">
-    &nbsp;&nbsp;${blog.getBrief}。。。。。
+    #if (blog.getId == 43)
+    <%
+      val br = blog.getBrief
+      val index = br.indexOf("http")
+      val abr = br.substring(0, index)
+      val url = br.substring(index)
+    %>
+    &nbsp;&nbsp;${abr}<a href="${url}" target="_blank">${url}<a/>
+    #else
+      &nbsp;&nbsp;${blog.getBrief}
+      &nbsp;&nbsp;<a href="${domain}/findblog/${blog.getId}"" target="_blank">Click for More</a>
+    #end
     </div>
     <div class="acticle-brief-content-foot">
       <i class="icon-tag"></i><a href="#">${blog.getBlogType.toString}</a>
-      <span><a href="${domain}/findblog/${blog.getId}">全文阅读</a><i class="icon-share-alt"></i></span>
+      <span><a href="${domain}/findblog/${blog.getId}" target="_blank">全文阅读</a><i class="icon-share-alt"></i></span>
     </div>
   </div>
 </div>
