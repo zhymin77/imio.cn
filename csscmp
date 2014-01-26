@@ -1,0 +1,4 @@
+#!/bin/bash
+rm assets/css/milo/cmp.css
+./compresser assets/css/frameworks/bootstrap.min.css >> assets/css/milo/cmp.css
+./compresser assets/css/milo/layout.css | sed 's/{0{/{0%{/g' >> assets/css/milo/cmp.css

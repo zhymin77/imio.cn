@@ -1,0 +1,10 @@
+#!/bin/bash
+rm assets/js/cmp.js
+
+./compresser assets/js/frameworks/jquery-1.9.1.min.js >> assets/js/cmp.js
+./compresser assets/js/milo/util.js >> assets/js/cmp.js
+./compresser assets/js/milo/showblog.js >> assets/js/cmp.js
+./compresser assets/js/milo/blog.js >> assets/js/cmp.js
+./compresser assets/js/frameworks/protobuf.js >> assets/js/cmp.js
+./compresser assets/js/protos/blogProtos.proto.js >> assets/js/cmp.js
+./compresser assets/js/protos/commentProtos.proto.js >> assets/js/cmp.js
