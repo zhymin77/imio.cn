@@ -41,9 +41,6 @@
     <% render("/float/fish.ssp", Map("resourceDomain" -> resourceDomain)) %>
     <% render("/float/seahorse.ssp", Map("resourceDomain" -> resourceDomain)) %>
     <% render("/float/feng.ssp", Map("resourceDomain" -> resourceDomain)) %>
-    #if (blogs.size != Nil)
-      <% render("/float/share.ssp") %>
-    #end
   </body>
 </html>
 <!--[if lt IE 11]>
