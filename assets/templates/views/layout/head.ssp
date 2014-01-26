@@ -11,10 +11,10 @@
         <ul class="nav">
           <li class="active"><a href="${domain}">Home</a></li>
         #if (isLogin)
-          <li><a href="${domain}/blog/edit">Blog</a></li>
+          <li><a href="${domain}/blog/edit.html">Blog</a></li>
         #end
-          <li><a href="${resourceDomain}/lottery/lottery.html">lottery</a></li>
-          <li><a href="${domain}/geolocation">Map</a></li>
+          <li><a href="${resourceDomain}/lottery/lottery.htm">lottery</a></li>
+          <li><a href="${domain}/geolocation.html">Map</a></li>
         </ul>
       </div>
       <ul class="nav pull-right">
@@ -22,9 +22,9 @@
         <li class="divider-vertical"></li>
         #if (isLogin)
         <li><a href="#">${username}</a></li>
-        <li><a href="${domain}/loginout">退出登录</a></li>
+        <li><a href="${domain}/loginout.html">退出登录</a></li>
         #else
-        <li><a href="${domain}/tologin">登录</a></li>
+        <li><a href="${domain}/tologin.html">登录</a></li>
         <li><a href="#">注册</a></li>
         #end
       </ul>

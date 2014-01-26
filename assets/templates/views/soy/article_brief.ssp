@@ -2,7 +2,7 @@
 <%@ val domain: String %>
 <div class="article-brief">
   <label class="brief-title well-small">
-    <a href="${domain}/findblog/${blog.getId}" target="_blank">${blog.getTitle}</a>
+    <a href="${domain}/findblog/${blog.getId}.html" target="_blank">${blog.getTitle}</a>
   </label>
   <div class="article-brief-content">
     <div class="acticle-brief-content-head">
@@ -26,12 +26,12 @@
     &nbsp;&nbsp;${abr}<a href="${url}" target="_blank">${url}<a/>
     #else
       &nbsp;&nbsp;${blog.getBrief}
-      &nbsp;&nbsp;<a href="${domain}/findblog/${blog.getId}"" target="_blank">Click for More</a>
+      &nbsp;&nbsp;<a href="${domain}/findblog/${blog.getId}.html"" target="_blank">Click for More</a>
     #end
     </div>
     <div class="acticle-brief-content-foot">
       <i class="icon-tag"></i><a href="#">${blog.getBlogType.toString}</a>
-      <span><a href="${domain}/findblog/${blog.getId}" target="_blank">全文阅读</a><i class="icon-share-alt"></i></span>
+      <span><a href="${domain}/findblog/${blog.getId}.html" target="_blank">全文阅读</a><i class="icon-share-alt"></i></span>
     </div>
   </div>
 </div>
