@@ -2,6 +2,7 @@ package com.milo.server
 
 import com.milo.server.intents._
 
+import unfiltered.netty._
 import unfiltered.request._
 import unfiltered.response._
 
@@ -15,7 +16,10 @@ object Server {
       BlogIntent.edit,
       BlogIntent.info,
       MainIntent.index
-    )).chunked(5*1024*1024).plan(asyncPlanify(BlogIntent.save)).run()
+    )).chunked(5*1024*1024).plan(asyncPlanify(BlogIntent.save))
+    .plan(async.Planify {
+        case req => req.respond(Redirect("/"))
+      }).run()
   }
 
   import unfiltered.netty.async.Plan.Intent

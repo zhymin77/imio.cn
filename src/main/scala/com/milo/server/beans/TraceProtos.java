@@ -88,12 +88,12 @@ public final class TraceProtos {
     
     // optional string ip = 4;
     public static final int IP_FIELD_NUMBER = 4;
-    private Object ip_;
+    private java.lang.Object ip_;
     public boolean hasIp() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
     public String getIp() {
-      Object ref = ip_;
+      java.lang.Object ref = ip_;
       if (ref instanceof String) {
         return (String) ref;
       } else {
@@ -107,7 +107,7 @@ public final class TraceProtos {
       }
     }
     private com.google.protobuf.ByteString getIpBytes() {
-      Object ref = ip_;
+      java.lang.Object ref = ip_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8((String) ref);
@@ -178,8 +178,10 @@ public final class TraceProtos {
       return size;
     }
     
+    private static final long serialVersionUID = 0L;
     @java.lang.Override
-    protected Object writeReplace() throws java.io.ObjectStreamException {
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
     
@@ -506,12 +508,12 @@ public final class TraceProtos {
       }
       
       // optional string ip = 4;
-      private Object ip_ = "";
+      private java.lang.Object ip_ = "";
       public boolean hasIp() {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
       public String getIp() {
-        Object ref = ip_;
+        java.lang.Object ref = ip_;
         if (!(ref instanceof String)) {
           String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
           ip_ = s;

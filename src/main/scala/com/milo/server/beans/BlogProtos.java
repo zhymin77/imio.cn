@@ -152,12 +152,12 @@ public final class BlogProtos {
     
     // optional string title = 2;
     public static final int TITLE_FIELD_NUMBER = 2;
-    private Object title_;
+    private java.lang.Object title_;
     public boolean hasTitle() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     public String getTitle() {
-      Object ref = title_;
+      java.lang.Object ref = title_;
       if (ref instanceof String) {
         return (String) ref;
       } else {
@@ -171,7 +171,7 @@ public final class BlogProtos {
       }
     }
     private com.google.protobuf.ByteString getTitleBytes() {
-      Object ref = title_;
+      java.lang.Object ref = title_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8((String) ref);
@@ -184,12 +184,12 @@ public final class BlogProtos {
     
     // optional string brief = 3;
     public static final int BRIEF_FIELD_NUMBER = 3;
-    private Object brief_;
+    private java.lang.Object brief_;
     public boolean hasBrief() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     public String getBrief() {
-      Object ref = brief_;
+      java.lang.Object ref = brief_;
       if (ref instanceof String) {
         return (String) ref;
       } else {
@@ -203,7 +203,7 @@ public final class BlogProtos {
       }
     }
     private com.google.protobuf.ByteString getBriefBytes() {
-      Object ref = brief_;
+      java.lang.Object ref = brief_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8((String) ref);
@@ -236,12 +236,12 @@ public final class BlogProtos {
     
     // optional string content = 6;
     public static final int CONTENT_FIELD_NUMBER = 6;
-    private Object content_;
+    private java.lang.Object content_;
     public boolean hasContent() {
       return ((bitField0_ & 0x00000020) == 0x00000020);
     }
     public String getContent() {
-      Object ref = content_;
+      java.lang.Object ref = content_;
       if (ref instanceof String) {
         return (String) ref;
       } else {
@@ -255,7 +255,7 @@ public final class BlogProtos {
       }
     }
     private com.google.protobuf.ByteString getContentBytes() {
-      Object ref = content_;
+      java.lang.Object ref = content_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8((String) ref);
@@ -360,8 +360,10 @@ public final class BlogProtos {
       return size;
     }
     
+    private static final long serialVersionUID = 0L;
     @java.lang.Override
-    protected Object writeReplace() throws java.io.ObjectStreamException {
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
     
@@ -694,12 +696,12 @@ public final class BlogProtos {
       }
       
       // optional string title = 2;
-      private Object title_ = "";
+      private java.lang.Object title_ = "";
       public boolean hasTitle() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       public String getTitle() {
-        Object ref = title_;
+        java.lang.Object ref = title_;
         if (!(ref instanceof String)) {
           String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
           title_ = s;
@@ -730,12 +732,12 @@ public final class BlogProtos {
       }
       
       // optional string brief = 3;
-      private Object brief_ = "";
+      private java.lang.Object brief_ = "";
       public boolean hasBrief() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       public String getBrief() {
-        Object ref = brief_;
+        java.lang.Object ref = brief_;
         if (!(ref instanceof String)) {
           String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
           brief_ = s;
@@ -808,12 +810,12 @@ public final class BlogProtos {
       }
       
       // optional string content = 6;
-      private Object content_ = "";
+      private java.lang.Object content_ = "";
       public boolean hasContent() {
         return ((bitField0_ & 0x00000020) == 0x00000020);
       }
       public String getContent() {
-        Object ref = content_;
+        java.lang.Object ref = content_;
         if (!(ref instanceof String)) {
           String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
           content_ = s;

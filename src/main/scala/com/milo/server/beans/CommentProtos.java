@@ -106,12 +106,12 @@ public final class CommentProtos {
     
     // optional string content = 5;
     public static final int CONTENT_FIELD_NUMBER = 5;
-    private Object content_;
+    private java.lang.Object content_;
     public boolean hasContent() {
       return ((bitField0_ & 0x00000010) == 0x00000010);
     }
     public String getContent() {
-      Object ref = content_;
+      java.lang.Object ref = content_;
       if (ref instanceof String) {
         return (String) ref;
       } else {
@@ -125,7 +125,7 @@ public final class CommentProtos {
       }
     }
     private com.google.protobuf.ByteString getContentBytes() {
-      Object ref = content_;
+      java.lang.Object ref = content_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8((String) ref);
@@ -222,8 +222,10 @@ public final class CommentProtos {
       return size;
     }
     
+    private static final long serialVersionUID = 0L;
     @java.lang.Override
-    protected Object writeReplace() throws java.io.ObjectStreamException {
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
     
@@ -599,12 +601,12 @@ public final class CommentProtos {
       }
       
       // optional string content = 5;
-      private Object content_ = "";
+      private java.lang.Object content_ = "";
       public boolean hasContent() {
         return ((bitField0_ & 0x00000010) == 0x00000010);
       }
       public String getContent() {
-        Object ref = content_;
+        java.lang.Object ref = content_;
         if (!(ref instanceof String)) {
           String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
           content_ = s;

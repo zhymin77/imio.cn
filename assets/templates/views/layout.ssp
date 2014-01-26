@@ -20,6 +20,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="${unescape(metaContent)}">
     <meta name="keywords" content="${unescape(metaKeyWords)}">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8"/>
     <!--[if IE]>
     <script src="${resourceDomain}/js/frameworks/html5.js"></script>
     <![endif]-->
@@ -47,6 +48,9 @@
     #end
   </body>
 </html>
+<!--[if lt IE 11]>
+<script type="text/javascript" src="${resourceDomain}/js/milo/alert.js"></script>
+<![endif]-->
 <script type="text/javascript" src="${resourceDomain}/js/frameworks/jquery-1.9.1.min.js"></script>
 <script type='text/javascript' charset="utf-8" src='http://js.touclick.com/js.touclick?b=959dff8e-827f-4a44-b204-7f42d41d0cc9&pf=api&v=v2-2'></script>
 <script type="text/javascript" src="${resourceDomain}/js/milo/util.js"></script>
