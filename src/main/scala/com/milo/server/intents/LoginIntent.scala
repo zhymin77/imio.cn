@@ -6,20 +6,21 @@ import unfiltered.Cookie
 import unfiltered.request._
 import unfiltered.response._
 
+import scala.xml.Utility
+
 object LoginIntent extends BaseIntent {
 
   val Token = "token"
+  override def scalateDefaultLayoutUri: String = "laybody.ssp"
 
   val auth = unfiltered.netty.async.Intent {
     case req@GET(Path("/tologin")) =>
-      req.respond(HtmlContent ~> render("main/login.ssp", Map()))
-    case req@POST(Path("/login") & Params(p)) =>
-      val username = p("username").headOption.getOrElse("")
-      val password = p("password").headOption.getOrElse("")
+    req.respond(ResponseString(renderToString("login/login.ssp")))
+    case req@GET(Path(Seg("login" :: username :: password :: Nil)) & Params(p)) =>
       if (username == "zhymin77" && password == "20764116")
-        req.respond(Redirect("/") ~>
-          SetCookies(Cookie(Token, username+"@"+password, maxAge = Some(60*60*24))))
-      else req.respond(Redirect("/tologin"))
+        req.respond(SetCookies(Cookie(Token, username+"@"+password,
+            maxAge = Some(60*60*24), path = Some("/"))) ~> ResponseString("ok"))
+      else req.respond(ResponseString("no"))
     case req@GET(Path("/loginout")) =>
       req.respond(SetCookies.discarding(Token) ~> Redirect("/"))
     case req@Cookies(cookies) & WithS(s) if cookies.contains(Token) =>

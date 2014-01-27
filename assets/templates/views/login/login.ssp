@@ -1,0 +1,20 @@
+<%@ val domain: String %>
+<div id="log" class="form-horizontal">
+  <h3 style="text-align:center;color:#2b91af;">唯～～～一</h3>
+  <p />
+  <div class="control-group">
+    <label class="control-label">用户名</label>
+    <div class="controls">
+      <input class="username" type="text" placeholder="用户名."/>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label">密码</label>
+    <div class="controls">
+      <input class="password" type="password" placeholder="密码."/>
+    </div>
+  </div>
+  <div style="text-align: right;">
+    <button id="user-login" class="btn btn-success">Go</button>
+  <div>
+</div>

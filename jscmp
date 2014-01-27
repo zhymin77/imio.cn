@@ -2,6 +2,9 @@
 rm assets/js/cmp.js
 
 ./compresser assets/js/frameworks/jquery-1.9.1.min.js >> assets/js/cmp.js
+./compresser assets/js/frameworks/easing.min.js >> assets/js/cmp.js
+./compresser assets/js/frameworks/jquery.bpopup.min.js >> assets/js/cmp.js
+./compresser assets/js/milo/bpopup.js >> assets/js/cmp.js
 ./compresser assets/js/milo/util.js >> assets/js/cmp.js
 ./compresser assets/js/milo/showblog.js >> assets/js/cmp.js
 ./compresser assets/js/milo/blog.js >> assets/js/cmp.js
