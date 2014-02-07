@@ -39,4 +39,16 @@ ProtoJs.Comment.Comment = PROTO.Message("ProtoJs.Comment.Comment",{
 		multiplicity: PROTO.optional,
 		type: function(){return PROTO.int64;},
 		id: 6
+	},
+	username: {
+		options: {},
+		multiplicity: PROTO.optional,
+		type: function(){return PROTO.string;},
+		id: 7
+	},
+	email: {
+		options: {},
+		multiplicity: PROTO.optional,
+		type: function(){return PROTO.string;},
+		id: 8
 	}});

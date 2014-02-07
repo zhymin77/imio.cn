@@ -15,7 +15,7 @@
         <a href="javascript:;">milo</a>
         <span>
           <i class="icon-eye-open"></i>${blog.getReview}人阅读
-          <i class="icon-edit"></i><a href="#">评论</a>
+          <i class="icon-edit"></i><a href="#herecomment">评论</a>
         </span>
       </div>
       <div class="acticle-brief-content-body" style="margin: 0 10px 10px;">
@@ -28,17 +28,36 @@
     </div>
   </div>
   <div class="comment-container">
-    <div class="commenteditor">
-      <a hidden name="herecomment"></a>
-      <textarea id ="commentsay" class="commentsay" blogId="${blogId}"></textarea>
-      <button onclick="submitComment();">递交</button>
+    <div class="f-bg">
+      <a name="herecomment"></a>
+      <div class="fl">
+        <div class="lr f-bg">
+          <label>用户名</label>
+          <input id="usrnm" type="text" placeholder="用户名.">
+        </div>
+        <div class="lr f-bg">
+          <label>邮箱</label>
+          <input id="eml" type="text" placeholder="Email.">
+        </div>
+      </div>
+      <textarea id ="commentsay" class="fl " blogId="${blogId}"></textarea>
+      <div class="fl">
+      </div>
+      <button id=cmtbtn class="fr" onclick="submitComment();">递交</button>
     </div>
     <div id="comments">
     #for (c <- comments)
       <div class="comment-item">
         <div class="comment-item-head">
         #if (c.getUserId == 0)
-         <span class="username">～游客～</span>
+         #if (c.getUsername != "")
+         <span class="username">～${c.getUsername}～</span>
+         #else
+         <span class="username">～&nbsp;&nbsp;匿&nbsp;名&nbsp;&nbsp;～</span>
+         #end
+         #if (c.getEmail != "")
+         <span class="username">～${c.getEmail}～</span>
+         #end
         #else
          <span class="username">imilo.cn</span>
         #end
@@ -51,5 +70,4 @@
     #end
     </div>
   </div>
-  <% render("/float/share.ssp", Map("bshareText" -> ("文章：《" + blog.getTitle + "》"))) %>
 </div>

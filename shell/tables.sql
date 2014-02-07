@@ -18,8 +18,10 @@ CREATE TABLE IF NOT EXISTS tb_comment(
   blogId int(11),
   userId int(11),
   timestamp int(11),
-  content char(500) NOT NULL DEFAULT '',
-  parentId int(11)
+  content char(255) NOT NULL DEFAULT '',
+  parentId int(11),
+  username char(50) NOT NULL DEFAULT '',
+  email char(50) NOT NULL DEFAULT ''
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /**
  * create for trace.

@@ -8,6 +8,15 @@ $(function(){
       loadUrl: '/tologin.html'
     });
   });
+  $('#hdct').on('click', function() {
+    if ($('#content').css('display') == 'block') {
+      $('#content').css('display', 'none');
+      $('#footer').css('display', 'none');
+    } else {
+      $('#content').css('display', 'block');
+      $('#footer').css('display', 'block');
+    }
+  });
 });
 $(document).on('click', '#user-login', function() {
   var username = $($(this).parent().parent()).find('input.username').val();

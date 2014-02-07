@@ -8,4 +8,6 @@ message Comment {
   optional int64 timestamp = 4;
   optional string content = 5;
   optional int64 parentId = 6 [default = 0];
+  optional string username = 7;
+  optional string email = 8;
 }

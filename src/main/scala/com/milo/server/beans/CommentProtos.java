@@ -34,6 +34,14 @@ public final class CommentProtos {
     // optional int64 parentId = 6 [default = 0];
     boolean hasParentId();
     long getParentId();
+    
+    // optional string username = 7;
+    boolean hasUsername();
+    String getUsername();
+    
+    // optional string email = 8;
+    boolean hasEmail();
+    String getEmail();
   }
   public static final class Comment extends
       com.google.protobuf.GeneratedMessage
@@ -146,6 +154,70 @@ public final class CommentProtos {
       return parentId_;
     }
     
+    // optional string username = 7;
+    public static final int USERNAME_FIELD_NUMBER = 7;
+    private java.lang.Object username_;
+    public boolean hasUsername() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    public String getUsername() {
+      java.lang.Object ref = username_;
+      if (ref instanceof String) {
+        return (String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        String s = bs.toStringUtf8();
+        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+          username_ = s;
+        }
+        return s;
+      }
+    }
+    private com.google.protobuf.ByteString getUsernameBytes() {
+      java.lang.Object ref = username_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+        username_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    
+    // optional string email = 8;
+    public static final int EMAIL_FIELD_NUMBER = 8;
+    private java.lang.Object email_;
+    public boolean hasEmail() {
+      return ((bitField0_ & 0x00000080) == 0x00000080);
+    }
+    public String getEmail() {
+      java.lang.Object ref = email_;
+      if (ref instanceof String) {
+        return (String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        String s = bs.toStringUtf8();
+        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+          email_ = s;
+        }
+        return s;
+      }
+    }
+    private com.google.protobuf.ByteString getEmailBytes() {
+      java.lang.Object ref = email_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+        email_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    
     private void initFields() {
       id_ = 0L;
       blogId_ = 0L;
@@ -153,6 +225,8 @@ public final class CommentProtos {
       timestamp_ = 0L;
       content_ = "";
       parentId_ = 0L;
+      username_ = "";
+      email_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -183,6 +257,12 @@ public final class CommentProtos {
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         output.writeInt64(6, parentId_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeBytes(7, getUsernameBytes());
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        output.writeBytes(8, getEmailBytes());
       }
       getUnknownFields().writeTo(output);
     }
@@ -216,6 +296,14 @@ public final class CommentProtos {
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(6, parentId_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(7, getUsernameBytes());
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(8, getEmailBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -353,6 +441,10 @@ public final class CommentProtos {
         bitField0_ = (bitField0_ & ~0x00000010);
         parentId_ = 0L;
         bitField0_ = (bitField0_ & ~0x00000020);
+        username_ = "";
+        bitField0_ = (bitField0_ & ~0x00000040);
+        email_ = "";
+        bitField0_ = (bitField0_ & ~0x00000080);
         return this;
       }
       
@@ -415,6 +507,14 @@ public final class CommentProtos {
           to_bitField0_ |= 0x00000020;
         }
         result.parentId_ = parentId_;
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        result.username_ = username_;
+        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
+          to_bitField0_ |= 0x00000080;
+        }
+        result.email_ = email_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -448,6 +548,12 @@ public final class CommentProtos {
         }
         if (other.hasParentId()) {
           setParentId(other.getParentId());
+        }
+        if (other.hasUsername()) {
+          setUsername(other.getUsername());
+        }
+        if (other.hasEmail()) {
+          setEmail(other.getEmail());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -508,6 +614,16 @@ public final class CommentProtos {
             case 48: {
               bitField0_ |= 0x00000020;
               parentId_ = input.readInt64();
+              break;
+            }
+            case 58: {
+              bitField0_ |= 0x00000040;
+              username_ = input.readBytes();
+              break;
+            }
+            case 66: {
+              bitField0_ |= 0x00000080;
+              email_ = input.readBytes();
               break;
             }
           }
@@ -657,6 +773,78 @@ public final class CommentProtos {
         return this;
       }
       
+      // optional string username = 7;
+      private java.lang.Object username_ = "";
+      public boolean hasUsername() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      public String getUsername() {
+        java.lang.Object ref = username_;
+        if (!(ref instanceof String)) {
+          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
+          username_ = s;
+          return s;
+        } else {
+          return (String) ref;
+        }
+      }
+      public Builder setUsername(String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000040;
+        username_ = value;
+        onChanged();
+        return this;
+      }
+      public Builder clearUsername() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        username_ = getDefaultInstance().getUsername();
+        onChanged();
+        return this;
+      }
+      void setUsername(com.google.protobuf.ByteString value) {
+        bitField0_ |= 0x00000040;
+        username_ = value;
+        onChanged();
+      }
+      
+      // optional string email = 8;
+      private java.lang.Object email_ = "";
+      public boolean hasEmail() {
+        return ((bitField0_ & 0x00000080) == 0x00000080);
+      }
+      public String getEmail() {
+        java.lang.Object ref = email_;
+        if (!(ref instanceof String)) {
+          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
+          email_ = s;
+          return s;
+        } else {
+          return (String) ref;
+        }
+      }
+      public Builder setEmail(String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000080;
+        email_ = value;
+        onChanged();
+        return this;
+      }
+      public Builder clearEmail() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        email_ = getDefaultInstance().getEmail();
+        onChanged();
+        return this;
+      }
+      void setEmail(com.google.protobuf.ByteString value) {
+        bitField0_ |= 0x00000080;
+        email_ = value;
+        onChanged();
+      }
+      
       // @@protoc_insertion_point(builder_scope:ProtoJs.Comment.Comment)
     }
     
@@ -682,11 +870,12 @@ public final class CommentProtos {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\023commentProtos.proto\022\017ProtoJs.Comment\"q" +
-      "\n\007Comment\022\n\n\002id\030\001 \001(\003\022\016\n\006blogId\030\002 \001(\003\022\021\n" +
-      "\006userId\030\003 \001(\003:\0010\022\021\n\ttimestamp\030\004 \001(\003\022\017\n\007c" +
-      "ontent\030\005 \001(\t\022\023\n\010parentId\030\006 \001(\003:\0010B\027\n\025com" +
-      ".milo.server.beans"
+      "\n\023commentProtos.proto\022\017ProtoJs.Comment\"\222" +
+      "\001\n\007Comment\022\n\n\002id\030\001 \001(\003\022\016\n\006blogId\030\002 \001(\003\022\021" +
+      "\n\006userId\030\003 \001(\003:\0010\022\021\n\ttimestamp\030\004 \001(\003\022\017\n\007" +
+      "content\030\005 \001(\t\022\023\n\010parentId\030\006 \001(\003:\0010\022\020\n\010us" +
+      "ername\030\007 \001(\t\022\r\n\005email\030\010 \001(\tB\027\n\025com.milo." +
+      "server.beans"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -698,7 +887,7 @@ public final class CommentProtos {
           internal_static_ProtoJs_Comment_Comment_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_ProtoJs_Comment_Comment_descriptor,
-              new java.lang.String[] { "Id", "BlogId", "UserId", "Timestamp", "Content", "ParentId", },
+              new java.lang.String[] { "Id", "BlogId", "UserId", "Timestamp", "Content", "ParentId", "Username", "Email", },
               com.milo.server.beans.CommentProtos.Comment.class,
               com.milo.server.beans.CommentProtos.Comment.Builder.class);
           return null;

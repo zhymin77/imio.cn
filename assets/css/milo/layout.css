@@ -1,6 +1,6 @@
 body {
   padding-top: 41px;
-  background: url(../../images/milo/a.jpg) no-repeat center center fixed; 
+  background: url(../../images/milo/b.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -147,21 +147,22 @@ body {
   width: auto;
   height: auto;
   z-index: -1;
-  animation: cloud 40s linear infinite;
-  -webkit-animation: cloud 40s linear infinite;
-  -moz-animation: cloud 40s linear infinite;
-  -ms-animation: cloud 40s linear infinite;
-  -o-animation: cloud 40s linear infinite;
+  animation: cloud 80s linear infinite;
+  -webkit-animation: cloud 80s linear infinite;
+  -moz-animation: cloud 80s linear infinite;
+  -ms-animation: cloud 80s linear infinite;
+  -o-animation: cloud 80s linear infinite;
 }
 #f-f{
   position: fixed;
+  z-index: -10;
   bottom: 50px;
   width: 70px;
-  animation: fish-swimming 30s infinite linear;
-  -webkit-animation: fish-swimming 30s infinite linear;
-  -moz-animation: fish-swimming 30s infinite linear;
-  -ms-animation: fish-swimming 30s infinite linear;
-  -o-animation: fish-swimming 30s infinite linear;
+  animation: fish-swimming 60s infinite linear;
+  -webkit-animation: fish-swimming 60s infinite linear;
+  -moz-animation: fish-swimming 60s infinite linear;
+  -ms-animation: fish-swimming 60s infinite linear;
+  -o-animation: fish-swimming 60s infinite linear;
 }
 #f-f img{
   animation: fish-animation 3s infinite linear;
@@ -352,36 +353,36 @@ body {
 @keyframes cloud
 {
 0%  {left: 0; top: 40px; width: 0;}
-10%  {left: 0%; top: 40px; width: 350px;}
-90%  {left: 74%; top: 40px; width: 350px;}
+10%  {left: 0%; top: 40px; width: 175px;}
+90%  {left: 74%; top: 40px; width: 175px;}
 100%  {left: 100%; top: 40px; width: 0}
 }
 @-webkit-keyframes cloud
 {
 0%  {left: 0; top: 40px; width: 0;}
-10%  {left: 0%; top: 40px; width: 350px;}
-90%  {left: 74%; top: 40px; width: 350px;}
+10%  {left: 0%; top: 40px; width: 175px;}
+90%  {left: 87%; top: 40px; width: 175px;}
 100%  {left: 100%; top: 40px; width: 0}
 }
 @-moz-keyframes cloud
 {
 0%  {left: 0; top: 20px; width: 0;}
-10%  {left: 0%; top: 40px; width: 350px;}
-90%  {left: 74%; top: 40px; width: 350px;}
+10%  {left: 0%; top: 40px; width: 175px;}
+90%  {left: 74%; top: 40px; width: 175px;}
 100%  {left: 100%; top: 20px; width: 0}
 }
 @-ms-keyframes cloud
 {
 0%  {left: 0; top: 20px; width: 0;}
-10%  {left: 0%; top: 40px; width: 350px;}
-90%  {left: 74%; top: 40px; width: 350px;}
+10%  {left: 0%; top: 40px; width: 175px;}
+90%  {left: 74%; top: 40px; width: 175px;}
 100%  {left: 100%; top: 20px; width: 0}
 }
 @-o-keyframes cloud
 {
 0%  {left: 0; top: 20px; width: 0;}
-10%  {left: 0%; top: 40px; width: 350px;}
-90%  {left: 74%; top: 40px; width: 350px;}
+10%  {left: 0%; top: 40px; width: 175px;}
+90%  {left: 74%; top: 40px; width: 175px;}
 100%  {left: 100%; top: 20px; width: 0}
 }
 @keyframes rotate
@@ -411,9 +412,6 @@ body {
 }
 #show-blog .commenteditor{
   text-align: center;
-}
-#show-blog textarea{
-  width: 624px;
 }
 #f-weather{
   position: fixed;
@@ -475,4 +473,44 @@ body {
 }
 #bppp .controls {
   margin-left: 120px;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.f-bg {
+  display: block;
+  overflow: hidden;
+}
+.lr {
+  width: 190px;
+  margin-right: 10px;
+}
+.lr label {
+  width: 50px;
+  float: left;
+  line-height: 25px;
+  text-align: center;
+}
+.lr input {
+  width: 120px;
+  float: right
+}
+#commentsay {
+  width: 403px;
+  height: 60px;
+}
+#cmtbtn {
+  height: 70px;
+  width: 73px;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+#hdct {
+  padding: 0;
 }

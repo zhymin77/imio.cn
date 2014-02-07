@@ -14,6 +14,8 @@ object CommentData extends BaseData {
     ppmt.setLong(3, comment.getTimestamp)
     ppmt.setString(4, comment.getContent)
     ppmt.setLong(5, comment.getParentId)
+    ppmt.setString(6, comment.getUsername)
+    ppmt.setString(7, comment.getEmail)
   }
 
   def findByBlogId(bid: String) = withRColl(SQL.QueryByBlodId(bid)) { rs =>
@@ -26,6 +28,8 @@ object CommentData extends BaseData {
       builder.setTimestamp(rs.getLong(4))
       builder.setContent(rs.getString(5))
       builder.setParentId(rs.getLong(6))
+      builder.setUsername(rs.getString(7))
+      builder.setEmail(rs.getString(8))
       listBuffer += builder.build
     }
     listBuffer.toList
@@ -34,8 +38,8 @@ object CommentData extends BaseData {
   object SQL {
     val table = "tb_comment"
     val Insert = "insert into " + table +
-      " (blogId, userId, timestamp, content, parentId) values(?, ?, ?, ?, ?)"
-    def QueryByBlodId(bid: String) = ("select id, blogId, userId, timestamp, content, parentId from "
+      " (blogId, userId, timestamp, content, parentId, username, email) values(?, ?, ?, ?, ?, ?, ?)"
+    def QueryByBlodId(bid: String) = ("select id, blogId, userId, timestamp, content, parentId, username, email from "
       + table + " where blogId='%s' order by timestamp DESC").format(bid)
   }
 }
