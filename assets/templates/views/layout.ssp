@@ -32,6 +32,7 @@
     </script>
   </head>
   <body>
+    <div style="z-index:-1;position:fixed;top:0;bottom:0;left:0;right:0;"><img src="http://www.imilo.cn/assets/images/milo/b.jpg" width="100%" height="100%"></div>
     <div id="body-wrap">
       <% render("/layout/head.ssp", Map("resourceDomain" -> resourceDomain, "domain" -> domain)) %>
       <div id="content"> ${unescape(body)} </div>
