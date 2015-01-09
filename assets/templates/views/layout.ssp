@@ -3,8 +3,8 @@
 <%@ val blog: com.milo.server.beans.BlogProtos.Blog = null %>
 <%@ val domain: String %>
 <%@ val body: String %>
-<%@ val metaContent: String = "milo个人主页，以后会开放给吊丝们，当前自己先玩玩" %>
-<%@ val metaKeyWords: String = "milo,博客,blog,笔记,图片,搜索引擎,个人主页,软件开发" %>
+<%@ val metaContent: String = "好好学习，天天向上！啦啦啦德玛西亚～～～x啊x啊～x啊x啊～～～" %>
+<%@ val metaKeyWords: String = "milo,博客,blog,笔记,图片,搜索引擎,个人主页,微信 QQ:26752983" %>
 <!DOCTYPE html>
 <html>
   <head>
@@ -16,7 +16,7 @@
       iMilo ${blog.getTitle}
     #end
     </title>
-    <meta name="baidu-site-verification" content="ZXKVqpDhMWahGB40" />
+    <meta name="baidu-site-verification" content="GMjcefSOjs" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="${unescape(metaContent)}">
     <meta name="keywords" content="${unescape(metaKeyWords)}">
